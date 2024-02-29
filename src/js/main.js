@@ -20,9 +20,9 @@ async function init() {
         //countries.sort((a, b) => (a.name.common > b.name.common) ? 1 : -1).reverse();
 
         //Filtrera data
-        //let filteredCountries = countries.filter((country) => {
-            //return country.name.common.toLowerCase().includes("an");
-        //});
+        let filteredCountries = countries.filter((country) => {
+            return country.name.common.toLowerCase().includes("an");
+        });
 
 
        displayCountries(countries);
