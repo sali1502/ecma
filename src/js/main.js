@@ -1,5 +1,6 @@
 "use strict";
 
+
 const url = "https://webbutveckling.miun.se/files/ramschema_ht23.json";
 
 async function init() {
@@ -10,20 +11,23 @@ async function init() {
         const response = await fetch(url);
         const courses = await response.json();
 
+        // Sorterar data från lägst till högst. .reverse(); gör det omvända.
 
-        // Sortera data omvänt med högsta talet först - .reverse().
-        //countries.sort((a, b) => a.population - b.population).reverse();
+        //courses.sort((a, b) => (a.coursename > b.coursename) ? 1 : -1);
 
-        // Sortera data utifrån namn omvänt, Ö först- .reverse().
-        //countries.sort((a, b) => (a.name.common > b.name.common) ? 1 : -1).reverse();
+        //courses.sort((a, b) => (a.progression > b.progression) ? 1 : -1);
 
-        //Filtrera data
-        //let filteredCountries = countries.filter((country) => {
-            //return country.name.common.toLowerCase().includes("an");
-        //});
+        //courses.sort((a, b) => (a.code > b.code) ? 1 : -1);
 
 
-        displayCourses(courses);
+        //Filtrerar data
+        let filteredCourses = courses.filter((course) => {
+            return course.coursename.includes("användbarhet");
+        });
+
+        displayCourses(filteredCourses);
+
+        //displayCourses(courses);
 
     } catch {
 
