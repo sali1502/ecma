@@ -12,11 +12,10 @@
     grid-gap: 0px;
     padding-top: 3vh;
     padding-bottom: 3vh;
-    padding-left: 10vw;
-    padding-right: 10vw;
-    width: 80%;
-    text-align: left;
-    max-width: 1512px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto 0 auto;
 }
 
@@ -24,16 +23,16 @@ body {
     background-color: #F2F5EA;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 400;
-    font-size: 0.9em;
-    line-height: 1.2em;
+    font-size: 0.8em;
+    line-height: 1.6em;
     text-align: left;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    padding-left: 10vw;
-    padding-right: 10vw;
-    max-width: 1512px;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto 0 auto;
-
 }
 
 h1 {
@@ -41,17 +40,23 @@ h1 {
     font-size: 1.8em;
     line-height: 1.2em;
     text-align: left;
-    padding-top: 5vh;
+    padding-top: 3vh;
     padding-bottom: 3vh;
-    max-width: 1512px;
+    width: 100%;
+    max-width: 800px;
     color: rgb(72, 89, 105);
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
 }
 
 label {
     display: block;
     justify-content: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 0.9em;
+    font-size: 0.8em;
     line-height: 1em;
 }
 
@@ -62,14 +67,12 @@ label {
     min-width: 300px;
 }
 
-table {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 0.9em;
-    line-height: 2.2em;
-    text-align: left;
-    max-width: 1512px;
-}
-
 th {
     cursor: pointer;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
 }

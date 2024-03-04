@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
@@ -15,21 +15,21 @@
 <body>
     <div class="container">
         <h1>Webbutveckling - Ramschema</h1>
-        <label for="search"><strong>Sök:</strong></label>
-        <input type="search" id="search" name="q" length="50" placeholder="Sök efter kurskod eller kursnamn">
+        <label for="searchBar"><strong>Sök:</strong></label>
+        <input type="text" id="searchBar" length="30" placeholder="Sök efter kurskod eller kursnamn" />
     </div>
 
     <body>
         <div class="container">
             <table>
-                <thead id="course-header">
+                <thead>
                     <tr>
-                        <td><strong>Kurskod</strong></td>
-                        <td><strong>Kursnamn</strong></td>
-                        <td><strong>Progression</strong></td>
+                        <th><button id="code"><strong>Kurskod</strong></button></th>
+                        <th><button id="courseName"><strong>Kursnamn</strong></button></th>
+                        <th><button id="progression"><strong>Progression</strong></button></th>
                     </tr>
                 </thead>
-                <tbody id="course-list"></tbody>
+                <tbody id="courseList"></tbody>
             </table>
             <div id="error"></div>
         </div>
