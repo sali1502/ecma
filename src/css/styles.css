@@ -69,3 +69,7 @@ table {
     text-align: left;
     max-width: 1512px;
 }
+
+th {
+    cursor: pointer;
+}

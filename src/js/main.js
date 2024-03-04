@@ -11,23 +11,22 @@ async function init() {
         const response = await fetch(url);
         const courses = await response.json();
 
-        // Sorterar data från lägst till högst. .reverse(); gör det omvända.
+    //Sorterar data från lägst till högst. .reverse(); gör det omvända.
 
-        //courses.sort((a, b) => (a.coursename > b.coursename) ? 1 : -1);
+    courses.sort((a, b) => (a.code > b.code) ? 1 : -1);
 
-        //courses.sort((a, b) => (a.progression > b.progression) ? 1 : -1);
+    courses.sort((a, b) => (a.coursename > b.coursename) ? 1 : -1);
 
-        //courses.sort((a, b) => (a.code > b.code) ? 1 : -1);
+    courses.sort((a, b) => (a.progression > b.progression) ? 1 : -1);
 
-
-        //Filtrerar data
+    //Filtrerar data
         let filteredCourses = courses.filter((course) => {
-            return course.coursename.includes("användbarhet");
-        });
+            return course.coursename.includes("webb");
+            });
+        
+        //displayCourses(filteredCourses);
 
-        displayCourses(filteredCourses);
-
-        //displayCourses(courses);
+        displayCourses(courses);
 
     } catch {
 
@@ -37,7 +36,7 @@ async function init() {
 
 }
 
-init();
+init()
 
 
 // Utskrift till DOM
@@ -55,6 +54,30 @@ function displayCourses(courses) {
     });
 
 }
+
+
+//Eventlyssnartest
+
+let courseListEl = document.getElementById("course-list");
+courseListEl.addEventListener("click", sort);
+
+function sort(courses) {
+let coursesSort = courses.sort((a, b) => (a.code > b.code) ? 1 : -1);
+return coursesSort;
+};
+
+displayCourses(coursesSort);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
